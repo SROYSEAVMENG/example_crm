@@ -3,7 +3,7 @@
 <style>
   .page-breadcrumb .breadcrumb {
     background: aliceblue;
-}
+  }
 .form-select {
     background-color: aliceblue;
   }
@@ -13,6 +13,13 @@
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
   }
+  .dataTables_length{
+    color: black;
+  }
+  .dataTables_info{
+    color: black;
+  }
+
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -28,7 +35,7 @@
         <div class="col-md-12 grid-margin stretch-card">
 <div class="card" style="background-color: aliceblue; border:none;">
   <div class="card-body">
-    <h6 class="card-title">Service All</h6>
+    <h6 class="card-title" style="color: black;">Service All</h6>
     <div class="table-responsive">
       <table id="dataTableExample" class="table">
         <thead>

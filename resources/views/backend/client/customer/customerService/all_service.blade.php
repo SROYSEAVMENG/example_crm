@@ -10,6 +10,17 @@
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
   }
+  .dataTables_length{
+    color: black;
+  }
+  .dataTables_info{
+    color: black;
+  }
+  .form-control,.form-control:hover, .form-control:focus, .form-control:active {
+  -webkit-box-shadow: 0 0 0 30px aliceblue inset;
+  -webkit-text-fill-color: black; 
+  }
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <div>
@@ -36,7 +47,7 @@
         <div class="col-md-12 grid-margin stretch-card">
 <div class="card" style="background-color: aliceblue; border:none">
   <div class="card-body">
-    <h6 class="card-title">Service All</h6>
+    <h6 class="card-title" style="color: black;">Service All</h6>
     <div class="table-responsive">
       <table id="dataTableExample" class="table">
         <thead>

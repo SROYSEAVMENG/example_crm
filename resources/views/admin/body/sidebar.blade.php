@@ -1,3 +1,11 @@
+<style>
+  .sidebar .sidebar-body .nav .nav-item .nav-link {
+    color: black;
+  }
+  .sidebar .sidebar-body .nav.sub-menu .nav-item .nav-link {
+    color: gray;
+  }
+</style>
 <nav class="sidebar" style="background-color: aliceblue;border:none;" >
     <div class="sidebar-header" style="background-color: #9BC5DE;border:none">
       <a href="#" class="sidebar-brand">

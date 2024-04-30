@@ -14,11 +14,11 @@
                           @csrf
                           <input type="hidden" name="id" value="{{ $permission->id}}">
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label" style="color: black;">Permission Name</label>
+                                <label for="exampleInputEmail1" class="form-label" style="color: gray;">Permission Name</label>
                                 <input type="text" name="name" style="background-color: aliceblue;color:black" class="form-control" value="{{ $permission->name}}">
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label" style="color: black;">Group Name</label>
+                                <label for="exampleInputEmail1" class="form-label" style="color: gray;">Group Name</label>
                                 <select name="group_name" style="background-color: aliceblue;color:black" class="form-select" id="exampleFormControlSelect1">
                                     <option selected="" disabled="">Select Group</option>
                                     <option value="type" {{$permission->group_name == 'type' ? 'selected': ''}}>Service Type</option>

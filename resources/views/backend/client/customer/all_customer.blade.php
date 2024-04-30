@@ -10,10 +10,17 @@
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
   }
-  /* input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-   background-color: aliceblue !important;
-   color: black !important;
-  } */
+  .dataTables_length{
+    color: black;
+  }
+  .dataTables_info{
+    color: black;
+  }
+  input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px aliceblue inset;
+    -webkit-text-fill-color: black;
+  }
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <div class="page-content" style="background-color: aliceblue;">

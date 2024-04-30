@@ -10,14 +10,17 @@
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
   }
-  input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-      background-color: aliceblue;
-  }
 
-  .form-control,.form-control:hover, .form-control:focus, .form-control:active {
-  -webkit-box-shadow: 0 0 0 30px aliceblue inset;
-  -webkit-text-fill-color: black; 
+  input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px aliceblue inset;
+    -webkit-text-fill-color: black;
 }
+  .dataTables_length{
+    color: black;
+  }
+  .dataTables_info{
+    color: black;
+  }
 
 
 </style>
@@ -34,7 +37,7 @@
         <div class="col-md-12 grid-margin stretch-card">
 <div class="card" style="background-color: aliceblue; border:none;">
   <div class="card-body">
-    <h6 class="card-title">Permission All</h6>
+    <h6 class="card-title" style="color: black;">Permission All</h6>
     <div class="table-responsive">
       <table id="dataTableExample" class="table">
         <thead>
@@ -79,14 +82,14 @@
             <form id="myForm" method="POST" action="{{ route('store.permission')}}" class="forms-sample" >
                 @csrf
                   <div class="mb-3 form-group" >
-                      <label for="exampleInputEmail1" class="form-label" style="color: black;">Permission Name</label>
-                      <input type="text" name="name" class="form-control">
+                      <label for="exampleInputEmail1" class="form-label" style="color: gray;">Permission Name</label>
+                      <input type="text" name="name" class="form-control" style="background-color: aliceblue; color:black">
                   </div>
                   <div class="mb-3 form-group" >
-                      <label for="exampleInputEmail1" class="form-label" style="color: black;">Group Name</label>
-                      <select name="group_name" class="form-select" id="exampleFormControlSelect1">
-                          <option selected="" disabled="" style="color:black;">Select Group</option>
-                          <option style="color: black;" value="type">Service Type</option>
+                      <label for="exampleInputEmail1" class="form-label" style="color: gray;">Group Name</label>
+                      <select name="group_name" style="color:black;" class="form-select" id="exampleFormControlSelect1">
+                          <option selected="" disabled="" >Select Group</option>
+                          <option  value="type">Service Type</option>
                           <option value="amenities">Amenities</option>
                           <option value="role">Role & Permission</option>
                       </select>

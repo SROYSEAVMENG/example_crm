@@ -82,7 +82,6 @@
                                 <label for="exampleInputEmail1" class="form-label" style="color: gray;">Confirm New Password</label>
                                 <input type="password" name="new_password_confirmation" class="form-control" id="new_password_confirmation" style="background-color: aliceblue;color:black;">
                             </div>
-
                             <button type="submit" class="btn btn-primary me-2">Save Changes</button>
                         </form>
                 </div>

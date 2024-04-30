@@ -1,9 +1,10 @@
-<nav class="navbar" style="background-color: aliceblue; border:none;">
+<nav class="navbar" style="background-color: aliceblue; border:none;box-shadow: 3px 0 5px 0 #03060b;
+">
     <a href="#" class="sidebar-toggler" style="background-color: aliceblue; border:none ">
         <i data-feather="menu"></i>
     </a>
     <div class="navbar-content" style="background-color: aliceblue;border:none">
-        <form class="search-form" style="background-color: white;">
+        <form class="search-form" style="background-color: white; height:35px; position:relative;top:13px">
             <div class="input-group" >
   <div class="input-group-text" style="background-color: white;">
     <i data-feather="search"></i>

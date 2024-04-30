@@ -1,5 +1,11 @@
 @extends('admin.admin_dashboard')
 @section('admin')
+<style>
+    input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #0c1427 inset;
+    -webkit-text-fill-color: #d0d6e1;
+}
+</style>
 <div class="page-content" style="background-color: aliceblue;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
