@@ -1,6 +1,15 @@
 @extends('admin.admin_dashboard')
 @section('admin')
+<style>
+  .table-hover > tbody > tr:hover > * {
+    --bs-table-accent-bg: gray;
+    color: white !important;
+}
+.text-muted,.text-body {
+  color: black !important;
+}
 
+</style>
 <div class="page-content" style="background-color: aliceblue; border:none">
 
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
@@ -27,10 +36,10 @@
       <div class="col-12 col-xl-12 stretch-card">
         <div class="row flex-grow-1">
           <div class="col-md-4 grid-margin stretch-card">
-            <div class="card">
+            <div class="card" style="background-color: aliceblue; border:none;box-shadow:3px 3 5px 3 black;">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline">
-                  <h6 class="card-title mb-0">New Customers</h6>
+                  <h6 class="card-title mb-0" style="color: black;">New Customers</h6>
                   <div class="dropdown mb-2">
                     <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
@@ -46,7 +55,7 @@
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-12 col-xl-5">
-                    <h3 class="mb-2">3,897</h3>
+                    <h3 class="mb-2" style="color: gray;">3,897</h3>
                     <div class="d-flex align-items-baseline">
                       <p class="text-success">
                         <span>+3.3%</span>
@@ -62,10 +71,10 @@
             </div>
           </div>
           <div class="col-md-4 grid-margin stretch-card">
-            <div class="card">
+            <div class="card" style="background-color: aliceblue; border:none;box-shadow:3px 3 5px 3 black;">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline">
-                  <h6 class="card-title mb-0">New Orders</h6>
+                  <h6 class="card-title mb-0" style="color: black;">New Orders</h6>
                   <div class="dropdown mb-2">
                     <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
@@ -81,7 +90,7 @@
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-12 col-xl-5">
-                    <h3 class="mb-2">35,084</h3>
+                    <h3 class="mb-2" style="color: gray;">35,084</h3>
                     <div class="d-flex align-items-baseline">
                       <p class="text-danger">
                         <span>-2.8%</span>
@@ -97,10 +106,10 @@
             </div>
           </div>
           <div class="col-md-4 grid-margin stretch-card">
-            <div class="card">
+            <div class="card" style="background-color: aliceblue; border:none;box-shadow:3px 3 5px 3 black;">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline">
-                  <h6 class="card-title mb-0">Growth</h6>
+                  <h6 class="card-title mb-0" style="color: black;">Growth</h6>
                   <div class="dropdown mb-2">
                     <a type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
@@ -116,7 +125,7 @@
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-12 col-xl-5">
-                    <h3 class="mb-2">89.87%</h3>
+                    <h3 class="mb-2" style="color: gray;">89.87%</h3>
                     <div class="d-flex align-items-baseline">
                       <p class="text-success">
                         <span>+2.8%</span>
@@ -137,10 +146,10 @@
 
     <div class="row">
       <div class="col-lg-7 col-xl-12 grid-margin stretch-card">
-        <div class="card">
+        <div class="card" style="background-color: aliceblue; border:none;box-shadow:3px 3 5px 3 black;">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-baseline mb-2">
-              <h6 class="card-title mb-0">Monthly sales</h6>
+              <h6 class="card-title mb-0" style="color: black;">Monthly sales</h6>
               <div class="dropdown mb-2">
                 <a type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
@@ -154,8 +163,8 @@
                 </div>
               </div>
             </div>
-            <p class="text-muted">Sales are activities related to selling or the number of goods or services sold in a given time period.</p>
-            <div id="monthlySalesChart"></div>
+            <p class="text-muted" style="color: gray;">Sales are activities related to selling or the number of goods or services sold in a given time period.</p>
+            <div id="monthlySalesChart" style="background-color: gray; "></div>
           </div>
         </div>
       </div>
@@ -163,10 +172,10 @@
 
     <div class="row">
       <div class="col-lg-5 col-xl-4 grid-margin grid-margin-xl-0 stretch-card">
-        <div class="card">
+        <div class="card" style="background-color: aliceblue; border:none;box-shadow:3px 3 5px 3 black;">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-baseline mb-2">
-              <h6 class="card-title mb-0">Inbox</h6>
+              <h6 class="card-title mb-0" style="color: black;">Inbox</h6>
               <div class="dropdown mb-2">
                 <a type="button" id="dropdownMenuButton6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
@@ -188,7 +197,7 @@
                 <div class="w-100">
                   <div class="d-flex justify-content-between">
                     <h6 class="text-body mb-2">Leonardo Payne</h6>
-                    <p class="text-muted tx-12">12.30 PM</p>
+                    <p class="text-muted tx-12" >12.30 PM</p>
                   </div>
                   <p class="text-muted tx-13">Hey! there I'm available...</p>
                 </div>
@@ -211,10 +220,10 @@
                 </div>
                 <div class="w-100">
                   <div class="d-flex justify-content-between">
-                    <h6 class="text-body mb-2">Jensen Combs</h6>
+                    <h6 class="text-body mb-2" >Jensen Combs</h6>
                     <p class="text-muted tx-12">08.22 PM</p>
                   </div>
-                  <p class="text-muted tx-13">This template is awesome!</p>
+                  <p class="text-muted tx-13" >This template is awesome!</p>
                 </div>
               </a>
               <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
@@ -223,10 +232,10 @@
                 </div>
                 <div class="w-100">
                   <div class="d-flex justify-content-between">
-                    <h6 class="text-body mb-2">Amiah Burton</h6>
-                    <p class="text-muted tx-12">05.49 AM</p>
+                    <h6 class="text-body mb-2" >Amiah Burton</h6>
+                    <p class="text-muted tx-12" >05.49 AM</p>
                   </div>
-                  <p class="text-muted tx-13">Nice to meet you</p>
+                  <p class="text-muted tx-13" >Nice to meet you</p>
                 </div>
               </a>
               <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
@@ -235,10 +244,10 @@
                 </div>
                 <div class="w-100">
                   <div class="d-flex justify-content-between">
-                    <h6 class="text-body mb-2">Yaretzi Mayo</h6>
-                    <p class="text-muted tx-12">01.19 AM</p>
+                    <h6 class="text-body mb-2" >Yaretzi Mayo</h6>
+                    <p class="text-muted tx-12" >01.19 AM</p>
                   </div>
-                  <p class="text-muted tx-13">Hey! there I'm available...</p>
+                  <p class="text-muted tx-13" >Hey! there I'm available...</p>
                 </div>
               </a>
             </div>
@@ -246,10 +255,10 @@
         </div>
       </div>
       <div class="col-lg-7 col-xl-8 stretch-card">
-        <div class="card">
+        <div class="card"  style="background-color: aliceblue; border:none;box-shadow:3px 3 5px 3 black;">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-baseline mb-2">
-              <h6 class="card-title mb-0">Projects</h6>
+              <h6 class="card-title mb-0" style="color: black;">Projects</h6>
               <div class="dropdown mb-2">
                 <a type="button" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
@@ -267,71 +276,71 @@
               <table class="table table-hover mb-0">
                 <thead>
                   <tr>
-                    <th class="pt-0">#</th>
-                    <th class="pt-0">Project Name</th>
-                    <th class="pt-0">Start Date</th>
-                    <th class="pt-0">Due Date</th>
-                    <th class="pt-0">Status</th>
-                    <th class="pt-0">Assign</th>
+                    <th class="pt-0" style="color: gray;">#</th>
+                    <th class="pt-0" style="color: gray;">Project Name</th>
+                    <th class="pt-0" style="color: gray;">Start Date</th>
+                    <th class="pt-0" style="color: gray;">Due Date</th>
+                    <th class="pt-0" style="color: gray;">Status</th>
+                    <th class="pt-0" style="color: gray;">Assign</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>NobleUI jQuery</td>
-                    <td>01/01/2022</td>
-                    <td>26/04/2022</td>
-                    <td><span class="badge bg-danger">Released</span></td>
-                    <td>Leonardo Payne</td>
+                    <td style="color: black;">1</td>
+                    <td style="color: black;">NobleUI jQuery</td>
+                    <td style="color: black;">01/01/2022</td>
+                    <td style="color: black;">26/04/2022</td>
+                    <td ><span class="badge bg-danger">Released</span></td>
+                    <td style="color: black;">Leonardo Payne</td>
                   </tr>
                   <tr>
-                    <td>2</td>
-                    <td>NobleUI Angular</td>
-                    <td>01/01/2022</td>
-                    <td>26/04/2022</td>
+                    <td style="color: black;">2</td>
+                    <td style="color: black;">NobleUI Angular</td>
+                    <td style="color: black;">01/01/2022</td>
+                    <td style="color: black;">26/04/2022</td>
                     <td><span class="badge bg-success">Review</span></td>
-                    <td>Carl Henson</td>
+                    <td style="color: black;">Carl Henson</td>
                   </tr>
                   <tr>
-                    <td>3</td>
-                    <td>NobleUI ReactJs</td>
-                    <td>01/05/2022</td>
-                    <td>10/09/2022</td>
+                    <td style="color: black;">3</td>
+                    <td style="color: black;">NobleUI ReactJs</td>
+                    <td style="color: black;">01/05/2022</td>
+                    <td style="color: black;">10/09/2022</td>
                     <td><span class="badge bg-info">Pending</span></td>
-                    <td>Jensen Combs</td>
+                    <td style="color: black;">Jensen Combs</td>
                   </tr>
                   <tr>
-                    <td>4</td>
-                    <td>NobleUI VueJs</td>
-                    <td>01/01/2022</td>
-                    <td>31/11/2022</td>
+                    <td style="color: black;">4</td>
+                    <td style="color: black;">NobleUI VueJs</td>
+                    <td style="color: black;">01/01/2022</td>
+                    <td style="color: black;">31/11/2022</td>
                     <td><span class="badge bg-warning">Work in Progress</span>
                     </td>
-                    <td>Amiah Burton</td>
+                    <td style="color: black;">Amiah Burton</td>
                   </tr>
                   <tr>
-                    <td>5</td>
-                    <td>NobleUI Laravel</td>
-                    <td>01/01/2022</td>
-                    <td>31/12/2022</td>
+                    <td style="color: black;">5</td>
+                    <td style="color: black;">NobleUI Laravel</td>
+                    <td style="color: black;">01/01/2022</td>
+                    <td style="color: black;">31/12/2022</td>
                     <td><span class="badge bg-danger">Coming soon</span></td>
-                    <td>Yaretzi Mayo</td>
+                    <td style="color: black;">Yaretzi Mayo</td>
                   </tr>
                   <tr>
-                    <td>6</td>
-                    <td>NobleUI NodeJs</td>
-                    <td>01/01/2022</td>
-                    <td>31/12/2022</td>
+                    <td style="color: black;">6</td>
+                    <td style="color: black;">NobleUI NodeJs</td>
+                    <td style="color: black;">01/01/2022</td>
+                    <td style="color: black;">31/12/2022</td>
                     <td><span class="badge bg-primary">Coming soon</span></td>
-                    <td>Carl Henson</td>
+                    <td style="color: black;">Carl Henson</td>
                   </tr>
                   <tr>
-                    <td class="border-bottom">3</td>
-                    <td class="border-bottom">NobleUI EmberJs</td>
-                    <td class="border-bottom">01/05/2022</td>
-                    <td class="border-bottom">10/11/2022</td>
+                    <td class="border-bottom" style="color: black;">3</td>
+                    <td class="border-bottom" style="color: black;">NobleUI EmberJs</td>
+                    <td class="border-bottom" style="color: black;">01/05/2022</td>
+                    <td class="border-bottom" style="color: black;">10/11/2022</td>
                     <td class="border-bottom"><span class="badge bg-info">Pending</span></td>
-                    <td class="border-bottom">Jensen Combs</td>
+                    <td class="border-bottom" style="color: black;">Jensen Combs</td>
                   </tr>
                 </tbody>
               </table>

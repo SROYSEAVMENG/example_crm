@@ -8,7 +8,7 @@
     background-color: aliceblue;
   }
   .form-control{
-    background-color: aliceblue;
+    background-color: aliceblue !important;
   }
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
@@ -19,8 +19,11 @@
   .dataTables_info{
     color: black;
   }
-
-</style>
+  .form-control:focus, .form-control:hover, .form-control:active ,.form-control:checked , .form-control:click{
+    -webkit-box-shadow: 0 0 0 30px aliceblue !important;
+    -webkit-text-fill-color: black !important;
+  }
+</style> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <div class="page-content"style="background-color: aliceblue;">

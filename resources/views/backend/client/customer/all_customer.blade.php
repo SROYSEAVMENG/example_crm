@@ -20,7 +20,11 @@
     -webkit-box-shadow: 0 0 0 30px aliceblue inset;
     -webkit-text-fill-color: black;
   }
-
+  
+  .form-control:focus{
+    -webkit-box-shadow: 0 0 0 30px aliceblue inset;
+    -webkit-text-fill-color: black;
+  }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <div class="page-content" style="background-color: aliceblue;">
