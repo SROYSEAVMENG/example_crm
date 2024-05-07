@@ -1,5 +1,12 @@
 @extends('admin.admin_dashboard')
 @section('admin')
+<style>
+    label > span {
+  color: red;
+  margin-left: 3px;
+}
+
+</style>
 <div class="page-content" style="background-color: aliceblue;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
@@ -17,8 +24,8 @@
                         <form id="myForm" method="POST" action="{{ route('store.amenitie')}}" class="forms-sample" >
                           @csrf
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label" style="color: gray;">Amenitie Name</label>
-                                <input type="text" style="background-color:aliceblue; color:black" name="amenities_name" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label" style="color: gray;">Amenitie Name <span>*</span></label>
+                                <input type="text" style="background-color:aliceblue; color:black" name="amenities_name" class="form-control" required>
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Save Changes</button>
                         </form>

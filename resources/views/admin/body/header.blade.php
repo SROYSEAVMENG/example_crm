@@ -9,7 +9,7 @@
   <div class="input-group-text" style="background-color: white;">
     <i data-feather="search"></i>
   </div>
-                <input type="text" class="form-control" id="navbarForm" placeholder="Search here...">
+                <input style="background-color: white !important;" type="text" class="form-control" id="navbarForm" placeholder="Search here...">
             </div>
         </form>
         <ul class="navbar-nav">

@@ -13,6 +13,12 @@
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
   }
+  .page-link{
+    background-color: white;
+  } 
+  .page-link:hover{
+    background-color: aliceblue;
+  }
 </style>
 
 <div class="page-content" style="background-color: aliceblue;">

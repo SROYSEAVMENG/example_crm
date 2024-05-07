@@ -5,7 +5,8 @@
     background-color: aliceblue;
   }
   .form-control{
-    background-color: aliceblue;
+    background-color: aliceblue !important;
+    color: black !important;
   }
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
@@ -21,8 +22,18 @@
   .dataTables_info{
     color: black;
   }
-
-
+  .dataTables_length select {
+    color: black;}
+    .page-link{
+    background-color: white;
+  } 
+  .page-link:hover{
+    background-color: aliceblue;
+  }
+  label > span {
+  color: red;
+  margin-left: 3px;
+}
 </style>
 
 <div class="page-content" style="background-color: aliceblue;">
@@ -67,7 +78,7 @@
   </div>
 </div>
 </div>
-</div>
+</div> 
 </div>
 
 {{-- Create form --}}
@@ -82,12 +93,12 @@
             <form id="myForm" method="POST" action="{{ route('store.permission')}}" class="forms-sample" >
                 @csrf
                   <div class="mb-3 form-group" >
-                      <label for="exampleInputEmail1" class="form-label" style="color: gray;">Permission Name</label>
-                      <input type="text" name="name" class="form-control" style="background-color: aliceblue; color:black">
+                      <label for="exampleInputEmail1" class="form-label" style="color: gray;">Permission Name <span>*</span></label>
+                      <input type="text" name="name" class="form-control" style="background-color: aliceblue; color:black" required>
                   </div>
                   <div class="mb-3 form-group" >
-                      <label for="exampleInputEmail1" class="form-label" style="color: gray;">Group Name</label>
-                      <select name="group_name" style="color:black;" class="form-select" id="exampleFormControlSelect1">
+                      <label for="exampleInputEmail1" class="form-label" style="color: gray;">Group Name <span>*</span></label>
+                      <select name="group_name" style="color:black;" class="form-select" id="exampleFormControlSelect1" required>
                           <option selected="" disabled="" >Select Group</option>
                           <option  value="type">Service Type</option>
                           <option value="amenities">Amenities</option>

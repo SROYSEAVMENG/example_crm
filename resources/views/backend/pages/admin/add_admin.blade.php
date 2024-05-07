@@ -10,6 +10,10 @@
     -webkit-text-fill-color: black;
     
 }
+label > span {
+  color: red;
+  margin-left: 3px;
+}
 </style>
 <div class="page-content" style="background-color: aliceblue;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -24,32 +28,32 @@
                         <form id="myForm" method="POST" action="{{ route('store.admin')}}" class="forms-sample" >
                           @csrf
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin User Name</label>
-                                <input type="text" style="background-color: aliceblue; color:black" name="username" class="form-control">
+                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin User Name <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue; color:black" name="username" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Name</label>
-                                <input type="text" style="background-color: aliceblue; color:black" name="name" class="form-control">
+                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Name <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue; color:black" name="name" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Email</label>
-                                <input type="email" style="background-color: aliceblue; color:black" name="email" class="form-control">
+                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Email <span>*</span></label>
+                                <input type="email" style="background-color: aliceblue; color:black" name="email" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Phone</label>
-                                <input type="text" style="background-color: aliceblue; color:black" name="phone" class="form-control">
+                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Phone <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue; color:black" name="phone" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Address</label>
-                                <input type="text" style="background-color: aliceblue; color:black" name="address" class="form-control">
+                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Address <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue; color:black" name="address" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Password</label>
-                                <input type="password" style="background-color:aliceblue; color:black;" name="password" class="form-control">
+                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Admin Password <span>*</span></label>
+                                <input type="password" style="background-color:aliceblue; color:black;" name="password" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Role Name</label>
-                                <select name="roles" style="background-color: aliceblue; color:black" class="form-select" id="exampleFormControlSelect1">
+                                <label for="exampleInputEmail1" style="color: gray;" class="form-label">Role Name <span>*</span></label>
+                                <select name="roles" style="background-color: aliceblue; color:black" class="form-select" id="exampleFormControlSelect1" required>
                                     <option selected="" disabled="">Select Role</option>
                                    @foreach ($roles as $role)
                                    <option value="{{ $role->id }}">{{ $role->name }} </option>

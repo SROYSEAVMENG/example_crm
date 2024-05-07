@@ -5,6 +5,10 @@
     -webkit-box-shadow: 0 0 0 30px #0c1427 inset;
     -webkit-text-fill-color: #d0d6e1;
 }
+label > span {
+  color: red;
+  margin-left: 3px;
+}
 </style>
 <div class="page-content" style="background-color: aliceblue;">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -23,8 +27,8 @@
                         <form id="myForm" method="POST" action="{{ route('store.role')}}" class="forms-sample" >
                           @csrf
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label" style="color:black">Role Name</label>
-                                <input type="text" name="name" style="background-color: aliceblue; color:black" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label" style="color:black">Role Name <span>*</span></label>
+                                <input type="text" name="name" style="background-color: aliceblue; color:black" class="form-control" required>
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Save Changes</button>
                         </form>

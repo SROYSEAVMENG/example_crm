@@ -5,7 +5,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     -webkit-box-shadow: 0 0 0 30px aliceblue inset;
     -webkit-text-fill-color: black;
 }
-
+label > span {
+  color: red;
+  margin-left: 3px;
+}
 
 
 </style>
@@ -22,28 +25,28 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
                         <form id="myForm" method="POST" action="{{ route('store.leads')}}" class="forms-sample" >
                           @csrf
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label" style="color: gray;">Company Name</label>
-                                <input type="text" style="background-color: aliceblue;color:black" name="name" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label" style="color: gray;">Company Name <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue;color:black" name="name" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Email</label>
-                                <input type="text" style="background-color: aliceblue;color:black" name="email" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Email <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue;color:black" name="email" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Phone Number</label>
-                                <input type="text" style="background-color: aliceblue;color:black" name="phone" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Phone Number <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue;color:black" name="phone" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Address</label>
-                                <input type="text" style="background-color: aliceblue;color:black" name="address" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Address <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue;color:black" name="address" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">City</label>
-                                <input type="text" style="background-color: aliceblue;color:black" name="city" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">City <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue;color:black" name="city" class="form-control" required>
                             </div>
                             <div class="mb-3 form-group" >
-                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Description</label>
-                                <input type="text" style="background-color: aliceblue;color:black" name="description" class="form-control">
+                                <label for="exampleInputEmail1" class="form-label"  style="color: gray;">Description <span>*</span></label>
+                                <input type="text" style="background-color: aliceblue;color:black" name="description" class="form-control" required>
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Save</button>
                         </form>

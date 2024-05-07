@@ -109,31 +109,31 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
         // Permission Type All ROute
     Route::controller(RoleController::class)->group(function(){
 
-        Route::get('/all/permission','AllPermission') ->name('all.permission');
-        Route::get('/add/permission','AddPermission') ->name('add.permission');
-        Route::post('/store/permission','StorePermission') ->name('store.permission');
-        Route::get('/edit/permission/{id}','EditPermission') ->name('edit.permission');
-        Route::post('/update/permission','UpdatePermission') ->name('update.permission');
-        Route::get('/delete/permission/{id}','DeletePermission') ->name('delete.permission');
+        Route::get('/allpermission','AllPermission') ->name('all.permission');
+        Route::get('/addpermission','AddPermission') ->name('add.permission');
+        Route::post('/storepermission','StorePermission') ->name('store.permission');
+        Route::get('/editpermission/{id}','EditPermission') ->name('edit.permission');
+        Route::post('/updatepermission','UpdatePermission') ->name('update.permission');
+        Route::get('/deletepermission/{id}','DeletePermission') ->name('delete.permission');
     });
 
     // Role All Route
     Route::controller(RoleController::class)->group(function(){
 
-        Route::get('/all/role','AllRole') ->name('all.role');
-        Route::get('/add/role','AddRole') ->name('add.role');
-        Route::post('/store/role','StoreRole') ->name('store.role');
-        Route::get('/edit/role/{id}','EditRole') ->name('edit.role');
-        Route::post('/update/role','UpdateRole') ->name('update.role');
-        Route::get('/delete/role/{id}','DeleteRole') ->name('delete.role');
+        Route::get('/listallrole','AllRole') ->name('listallrole');
+        Route::get('/addrole','AddRole') ->name('add.role');
+        Route::post('/storerole','StoreRole') ->name('store.role');
+        Route::get('/editrole/{id}','EditRole') ->name('edit.role');
+        Route::post('/updaterole','UpdateRole') ->name('update.role');
+        Route::get('/deleterole/{id}','DeleteRole') ->name('delete.role');
 
         // Add role in permission All route
-        Route::get('/add/role/permission','AddRolePermission') ->name('add.role.permission');
+        Route::get('/addrolepermission','AddRolePermission') ->name('addrolepermission');
         Route::post('/role/permission/store','RolePermissionStore') ->name('role.permission.store');
-        Route::get('/all/role/permission','AllRolePermission') ->name('all.role.permission');
-        Route::get('/admin/edit/role/{id}','AdminEditRole') ->name('admin.edit.role');
-        Route::post('/admin/role/update/{id}','AdminUpdateRole') ->name('admin.role.update');
-        Route::get('/admin/delete/role/{id}','AdminDeleteRole') ->name('admin.delete.role');
+        Route::get('/allrolepermission','AllRolePermission') ->name('allrolepermission');
+        Route::get('/admineditrole/{id}','AdminEditRole') ->name('admin.edit.role');
+        Route::post('/adminroleupdate/{id}','AdminUpdateRole') ->name('admin.role.update');
+        Route::get('/admindeleterole/{id}','AdminDeleteRole') ->name('admin.delete.role');
 
 
     });
@@ -141,12 +141,12 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
         // Admin User All ROute
     Route::controller(AdminController::class)->group(function(){
 
-        Route::get('/all/admin','AllAdmin') ->name('all.admin');
-        Route::get('/add/admin','AddAdmin') ->name('add.admin');
-        Route::post('/store/admin','StoreAdmin') ->name('store.admin');
-        Route::get('/edit/admin/{id}','EditAdmin') ->name('edit.admin');
-        Route::post('/update/admin/{id}','UpdateAdmin') ->name('update.admin');
-        Route::get('/delete/admin/{id}','DeleteAdmin') ->name('delete.admin');
+        Route::get('/alladmin','AllAdmin') ->name('all.admin');
+        Route::get('/addadmin','AddAdmin') ->name('add.admin');
+        Route::post('/storeadmin','StoreAdmin') ->name('store.admin');
+        Route::get('/editadmin/{id}','EditAdmin') ->name('edit.admin');
+        Route::post('/updateadmin/{id}','UpdateAdmin') ->name('update.admin');
+        Route::get('/deleteadmin/{id}','DeleteAdmin') ->name('delete.admin');
 
     });
 
@@ -154,30 +154,30 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
      Route::controller(ClientController::class)->group(function(){
 
         // Services all route
-        Route::get('/all/services','AllService') ->name('all.services');
-        Route::get('/add/services','AddService') ->name('add.services');
-        Route::post('/store/services','StoreService') ->name('store.services');
-        Route::get('/edit/services/{id}','EditService') ->name('edit.services');
-        Route::post('/update/services/{id}','UpdateService') ->name('update.services');
-        Route::get('/delete/services/{id}','DeleteService') ->name('delete.services');
+        Route::get('/allservices','AllService') ->name('all.services');
+        Route::get('/addservices','AddService') ->name('add.services');
+        Route::post('/storeservices','StoreService') ->name('store.services');
+        Route::get('/editservices/{id}','EditService') ->name('edit.services');
+        Route::post('/updateservices/{id}','UpdateService') ->name('update.services');
+        Route::get('/deleteservices/{id}','DeleteService') ->name('delete.services');
 
         // Leads all route
-        Route::get('/all/leads','AllLead') ->name('all.leads');
-        Route::get('/add/leads','AddLead') ->name('add.leads');
-        Route::post('/store/leads','StoreLead') ->name('store.leads');
-        Route::get('/edit/leads/{id}','EditLead') ->name('edit.leads');
-        Route::get('/delete/leads/{id}','DeleteLead') ->name('delete.leads');
+        Route::get('/allleads','AllLead') ->name('all.leads');
+        Route::get('/addleads','AddLead') ->name('add.leads');
+        Route::post('/storeleads','StoreLead') ->name('store.leads');
+        Route::get('/editleads/{id}','EditLead') ->name('edit.leads');
+        Route::get('/deleteleads/{id}','DeleteLead') ->name('delete.leads');
 
         // Customers all route
-        Route::get('/all/customers','AllCustomer') ->name('all.customers');
-        Route::post('/store/customers','StoreCustomer') ->name('store.customers');
-        Route::get('/view/customers/{id}','ViewCustomer') ->name('view.customers');
-        Route::get('/edit/customers/{id}','EditCustomer') ->name('edit.customers');
-        Route::post('/update/customers/{id}','UpdateCustomer') ->name('update.customers');
+        Route::get('/allcustomers','AllCustomer') ->name('all.customers');
+        Route::post('/storecustomers','StoreCustomer') ->name('store.customers');
+        Route::get('/viewcustomers/{id}','ViewCustomer') ->name('view.customers');
+        Route::get('/editcustomers/{id}','EditCustomer') ->name('edit.customers');
+        Route::post('/updatecustomers/{id}','UpdateCustomer') ->name('update.customers');
 
          // Customer_service all route
-         Route::get('/all/customers/service','AllCustomerService') ->name('all.customers.services');
-         Route::post('/store/customers/services','StoreCustomerService') ->name('store.customerservices');
+         Route::get('/allcustomers/service','AllCustomerService') ->name('all.customers.services');
+         Route::post('/storecustomers/services','StoreCustomerService') ->name('store.customerservices');
 
 
 

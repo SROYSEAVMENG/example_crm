@@ -5,10 +5,13 @@
     background: aliceblue;
 }
 .form-select {
-    background-color: aliceblue;
+    background-color: aliceblue ;
+    
   }
   .form-control{
-    background-color: aliceblue;
+    background-color: aliceblue !important;
+    color: black !important;
+
   }
   .pagination {
     --bs-pagination-disabled-bg: aliceblue;
@@ -19,7 +22,14 @@
   .dataTables_info{
     color: black;
   }
-
+  .dataTables_length select {
+    color: black;}
+    .page-link{
+    background-color: white;
+  } 
+  .page-link:hover{
+    background-color: aliceblue;
+  }
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
